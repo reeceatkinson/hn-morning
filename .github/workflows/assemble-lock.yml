@@ -15,10 +15,10 @@ jobs:
       - name: Assemble package-lock.json when all parts exist
         run: |
           set -euo pipefail
-          test -f .lock-parts/0
-          test -f .lock-parts/1
-          test -f .lock-parts/2
-          cat .lock-parts/0 .lock-parts/1 .lock-parts/2 > package-lock.json
+          for i in 0 1 2 3 4 5 6 7; do
+            test -f ".lock-parts/$i"
+          done
+          cat .lock-parts/0 .lock-parts/1 .lock-parts/2 .lock-parts/3 .lock-parts/4 .lock-parts/5 .lock-parts/6 .lock-parts/7 > package-lock.json
           python3 -c "import json; json.load(open('package-lock.json'))"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
