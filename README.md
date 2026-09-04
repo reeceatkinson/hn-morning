@@ -74,7 +74,7 @@ Vercel sends `Authorization: Bearer $CRON_SECRET` automatically if `CRON_SECRET`
 1. Import this repo into Vercel (Hobby is fine).
 2. Set `CRON_SECRET` (and `OPENAI_API_KEY` if you want live model calls).
 3. Trigger a deploy, then run generate once:  
-   `curl -X POST https://\u003cdeployment\u003e/api/cron/generate -H "Authorization: Bearer $CRON_SECRET"`  
+   `curl -X POST https://<deployment>/api/cron/generate -H "Authorization: Bearer $CRON_SECRET"`  
    or rely on the first cron. A committed seed summary ships so the page is never empty on day one.
 4. **Domain:** attach **reeceatkinson.dev** (lab), not `.com` / `.sh`.  
    **Note:** `reeceatkinson.dev` currently **redirects to the `.com`**. In Vercel, add the domain on this project and **remove/disable the redirect** at the DNS or the other Vercel project that owns `.dev` → `.com`. Until that redirect is dropped, visitors never hit this app.
