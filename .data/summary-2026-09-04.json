@@ -1,0 +1,182 @@
+{
+  "date": "2026-09-04",
+  "generatedAt": "2026-09-04T12:21:29.170Z",
+  "timezone": "Europe/London",
+  "mode": "extractive",
+  "headline": "Front page led by \u201c.name Termination\u201d",
+  "intro": "A 14-story cut of this morning\u2019s Hacker News front page, skipping hiring posts and capping any one domain at two slots so the brief isn\u2019t a single-site pile-up. Themes in the mix: AI, Science. Ranked by score with a light boost for discussion.",
+  "themes": [
+    "AI",
+    "Science"
+  ],
+  "stories": [
+    {
+      "id": 49550772,
+      "title": ".name Termination",
+      "url": "https://neil.fraser.name/news/2026/09/03/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49550772",
+      "score": 1935,
+      "comments": 479,
+      "by": "pavel_lishin",
+      "domain": "neil.fraser.name",
+      "text": null,
+      "blurb": "1935 points and 479 comments via neil.fraser.name."
+    },
+    {
+      "id": 49554643,
+      "title": "GPT-6 Astra",
+      "url": "https://openai.com/index/gpt-6-astra/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49554643",
+      "score": 1895,
+      "comments": 1706,
+      "by": "kibae",
+      "domain": "openai.com",
+      "text": "System Card: https://deploymentsafety.openai.com/gpt-6-astra Related ongoing threads: OpenAI's GPT-6 Astra on ARC-AGI-3 - https://news.ycombinator.com/item?id=49555691 GPT-6 Astra makes major gains in the Artificial Analysis Coding Agent Index - https://news.ycombinator.com/item?id=49556147",
+      "blurb": "System Card: https://deploymentsafety.openai.com/gpt-6-astra Related ongoing threads: OpenAI's GPT-6 Astra on ARC-AGI-3 - https://news.ycombinator.com/item?id=49555691 GPT-6 Astra makes major gains in the Artificial Anal\u2026"
+    },
+    {
+      "id": 49554520,
+      "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
+      "url": "https://inference-docs.cerebras.ai/models/overview",
+      "hnUrl": "https://news.ycombinator.com/item?id=49554520",
+      "score": 587,
+      "comments": 194,
+      "by": "altertable",
+      "domain": "inference-docs.cerebras.ai",
+      "text": null,
+      "blurb": "587 points and 194 comments via inference-docs.cerebras.ai."
+    },
+    {
+      "id": 49526453,
+      "title": "The largest electric aircraft just flew [video]",
+      "url": "https://www.youtube.com/watch?v=nM86DBOqgPM",
+      "hnUrl": "https://news.ycombinator.com/item?id=49526453",
+      "score": 362,
+      "comments": 257,
+      "by": "feb",
+      "domain": "youtube.com",
+      "text": "https://www.ycombinator.com/library/Y6-the-world-s-largest-e...",
+      "blurb": "https://www.ycombinator.com/library/Y6-the-world-s-largest-e..."
+    },
+    {
+      "id": 49544762,
+      "title": "Go grandmaster Shin defeats AI KataGo with a two-stone handicap",
+      "url": "https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007",
+      "hnUrl": "https://news.ycombinator.com/item?id=49544762",
+      "score": 358,
+      "comments": 136,
+      "by": "gmays",
+      "domain": "kedglobal.com",
+      "text": null,
+      "blurb": "358 points and 136 comments via kedglobal.com."
+    },
+    {
+      "id": 49550375,
+      "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
+      "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49550375",
+      "score": 311,
+      "comments": 102,
+      "by": "rabahs",
+      "domain": "babyloniantwins.com",
+      "text": "These are my notes from porting my Amiga game, which I originally built in Baghdad in 1993 in MC68000 assembly, to Godot, using Claude Fable 5 during last July holiday. It took an evening! Getting the feel right and shipping it took a few more weekends and evenings. I spent the last few weeks analyzing what Claude did, feeding it my 33 years of memory of how I built the game, my notes and the git repos. It wrote the first draft of the article, and I edited line by line over a week. The screenshots of my 1993 map editor is the first I have run it since then. The one thing I never verified myself is the 108-byte explanation. \"Before starting everything, the model assembled the code using vasm on my Mac, and kept going till the binary is byte-identical to the binaries I had in my original game. Even after that, the there was mismatch of about 108 bytes. I originally used AsmOne which assembles into memory, and the game saved into the disk by saving that memory after running the game. So the original shipped files are a snapshot of the game that had already been running, not clean asm-one output.\" Please post any questions. I am also releasing the original game for free.",
+      "blurb": "These are my notes from porting my Amiga game, which I originally built in Baghdad in 1993 in MC68000 assembly, to Godot, using Claude Fable 5 during last July holiday. It took an evening! Getting the feel right and ship\u2026"
+    },
+    {
+      "id": 49551760,
+      "title": "K2 Horizon: A connected fleet of six open models",
+      "url": "https://ifm.ai/blog/k2/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49551760",
+      "score": 305,
+      "comments": 107,
+      "by": "karimf",
+      "domain": "ifm.ai",
+      "text": null,
+      "blurb": "305 points and 107 comments via ifm.ai."
+    },
+    {
+      "id": 49552572,
+      "title": "Artificial beaver dams saw juvenile coho salmon survival rates go from 8% to 60%",
+      "url": "https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california",
+      "hnUrl": "https://news.ycombinator.com/item?id=49552572",
+      "score": 284,
+      "comments": 92,
+      "by": "speckx",
+      "domain": "discoverwildlife.com",
+      "text": null,
+      "blurb": "284 points and 92 comments via discoverwildlife.com."
+    },
+    {
+      "id": 49561320,
+      "title": "Hackers Had a Live Feed of Every ID Verification Company Scanned for over a Year",
+      "url": "http://www.techdirt.com/2026/09/03/hackers-had-a-live-feed-of-every-id-this-verification-company-scanned-for-over-a-year/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49561320",
+      "score": 245,
+      "comments": 90,
+      "by": "beardyw",
+      "domain": "techdirt.com",
+      "text": null,
+      "blurb": "245 points and 90 comments via techdirt.com."
+    },
+    {
+      "id": 49557206,
+      "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
+      "url": "https://armature.tech/blog/which-tools-coding-agents-install",
+      "hnUrl": "https://news.ycombinator.com/item?id=49557206",
+      "score": 237,
+      "comments": 110,
+      "by": "screm",
+      "domain": "armature.tech",
+      "text": null,
+      "blurb": "237 points and 110 comments via armature.tech."
+    },
+    {
+      "id": 49544618,
+      "title": "GPS glitched across the US by as much as 33 feet",
+      "url": "https://www.sciencealert.com/gps-glitched-across-the-us-by-as-much-as-33-feet-scientists-have-never-seen-this-before",
+      "hnUrl": "https://news.ycombinator.com/item?id=49544618",
+      "score": 190,
+      "comments": 116,
+      "by": "thread_id",
+      "domain": "sciencealert.com",
+      "text": null,
+      "blurb": "190 points and 116 comments via sciencealert.com."
+    },
+    {
+      "id": 49538069,
+      "title": "Unusual Suspects",
+      "url": "https://neal.fun/unusual-suspects/",
+      "hnUrl": "https://news.ycombinator.com/item?id=49538069",
+      "score": 174,
+      "comments": 29,
+      "by": "beeperboy95",
+      "domain": "neal.fun",
+      "text": null,
+      "blurb": "174 points and 29 comments via neal.fun."
+    },
+    {
+      "id": 49526298,
+      "title": "Xanadu was waiting for agents",
+      "url": "https://zed.dev/blog/agentic-xanadu",
+      "hnUrl": "https://news.ycombinator.com/item?id=49526298",
+      "score": 129,
+      "comments": 53,
+      "by": "nsm",
+      "domain": "zed.dev",
+      "text": null,
+      "blurb": "129 points and 53 comments via zed.dev."
+    },
+    {
+      "id": 49507072,
+      "title": "How an MIT research project became the Julia programming language",
+      "url": "https://news.mit.edu/2026/how-mit-research-project-became-global-programming-language-0831",
+      "hnUrl": "https://news.ycombinator.com/item?id=49507072",
+      "score": 124,
+      "comments": 51,
+      "by": "theanonymousone",
+      "domain": "news.mit.edu",
+      "text": null,
+      "blurb": "124 points and 51 comments via news.mit.edu."
+    }
+  ]
+}
