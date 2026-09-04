@@ -1,0 +1,30 @@
+name: assemble-lock
+on:
+  push:
+    paths:
+      - '.lock-parts/**'
+      - '.github/workflows/assemble-lock.yml'
+jobs:
+  assemble:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble package-lock.json when all parts exist
+        run: |
+          set -euo pipefail
+          test -f .lock-parts/0
+          test -f .lock-parts/1
+          test -f .lock-parts/2
+          cat .lock-parts/0 .lock-parts/1 .lock-parts/2 > package-lock.json
+          python3 -c "import json; json.load(open('package-lock.json'))"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf .lock-parts
+          rm -f .github/workflows/assemble-lock.yml
+          git add -A
+          git status
+          git commit -m "Add package-lock.json"
+          git push
