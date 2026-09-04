@@ -1,0 +1,1 @@
+@file:///tmp/package-lock.min.json
