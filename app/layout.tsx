@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Newsreader, Source_Serif_4 } from "next/font/google";
+import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
+
+const sans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 const display = Newsreader({
   subsets: ["latin"],
   variable: "--font-display",
   style: ["normal", "italic"],
-});
-
-const serif = Source_Serif_4({
-  subsets: ["latin"],
-  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${display.variable} ${serif.variable} h-full antialiased`}
+      className={`${sans.variable} ${display.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

@@ -1,5 +1,6 @@
-import { AskPanel } from "./ask-panel";
-import { askLimit, loadTodayThread, readQuotaSnapshot } from "@/lib/asks";
+import { AskBar } from "./ask-bar";
+import { SiteHeader } from "./site-header";
+import { askLimit, readQuotaSnapshot } from "@/lib/asks";
 import { formatLondonLong, londonDate } from "@/lib/london-date";
 import { loadLatestSummary } from "@/lib/storage";
 
@@ -8,30 +9,21 @@ export const runtime = "nodejs";
 
 export default async function Home() {
   const today = londonDate();
-  const [summary, quota, thread] = await Promise.all([
+  const [summary, quota] = await Promise.all([
     loadLatestSummary(),
     readQuotaSnapshot(),
-    loadTodayThread(today),
   ]);
-  const stale = summary && summary.date !== today;
+  const stale = Boolean(summary && summary.date !== today);
+  const limit = askLimit();
 
   return (
     <>
-      <header className="masthead">
-        <div className="wrap masthead-row">
-          <div>
-            <p className="kicker">Hacker News · morning cut</p>
-            <h1>HN Morning</h1>
-            <p className="date-line">
-              {summary ? formatLondonLong(summary.date) : formatLondonLong(today)}
-              {stale ? (
-                <span className="stale">Showing latest on file</span>
-              ) : null}
-            </p>
-          </div>
-          <p className="proto">Prototype · reeceatkinson.dev</p>
-        </div>
-      </header>
+      <SiteHeader
+        dateLine={formatLondonLong(summary?.date ?? today)}
+        used={quota.used}
+        limit={limit}
+        stale={stale}
+      />
 
       <main className="brief">
         <div className="wrap">
@@ -59,8 +51,12 @@ export default async function Home() {
                     </a>
                   </h2>
                   <p className="meta">
-                    {story.score} points · {story.comments} comments · {story.by}
-                    {story.domain ? ` · ${story.domain}` : ""}
+                    <span className="chip">{story.score} pts</span>
+                    <span className="chip">{story.comments} comments</span>
+                    <span className="chip">{story.by}</span>
+                    {story.domain ? (
+                      <span className="chip">{story.domain}</span>
+                    ) : null}
                   </p>
                   <p className="blurb">{story.blurb}</p>
                   <p className="links">
@@ -84,11 +80,7 @@ export default async function Home() {
         <div className="wrap">Seeded from the public HN Firebase API.</div>
       </footer>
 
-      <AskPanel
-        initialMessages={thread.messages}
-        initialUsed={quota.used}
-        limit={askLimit()}
-      />
+      <AskBar initialUsed={quota.used} limit={limit} />
     </>
   );
 }

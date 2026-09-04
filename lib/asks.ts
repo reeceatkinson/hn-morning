@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
 import type { AskMessage, AskQuota, AskThread } from "./types";
+import { londonDate } from "./london-date";
 import { loadQuota, loadThread, saveQuota, saveThread } from "./storage";
 
 export const DEFAULT_ASK_LIMIT = 15;
@@ -67,4 +68,9 @@ export function appendMessage(
 
 export async function loadTodayThread(date: string): Promise<AskThread> {
   return loadThread(date);
+}
+
+export async function findMessage(id: string): Promise<AskMessage | null> {
+  const thread = await loadThread(londonDate());
+  return thread.messages.find((m) => m.id === id) ?? null;
 }

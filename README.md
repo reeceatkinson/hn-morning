@@ -31,8 +31,8 @@ In production `CRON_SECRET` is required. Locally, if it is unset, generate is al
 
 - `GET /api/ask` — `{ used, remaining, limit, messages }` for today.
 - `POST /api/ask` `{ "question": "…" }` — **reserves a slot first** (atomic file write), then answers. Hard-stops at 15 with HTTP 429. Abuse cannot run unbounded model calls.
-- Remaining copy in the bar: `12 / 15 asks left`.
-- After 15: input disables, “public cap reached”.
+- Remaining copy is a pill: `12 / 15 left`. After 15 the pill reads `Cap reached` and the input disables.
+- Submitting a follow-up opens it as a **full page** (`/ask/[id]`) — question as the headline, answer as the body. Home stays the daily brief plus the ask bar. No chat thread.
 
 Counter lives in `.data/quota.json`. Today’s thread: `.data/thread-YYYY-MM-DD.json`. Both are gitignored; summaries are committed so the homepage demos without a seed if you skip the live fetch.
 
